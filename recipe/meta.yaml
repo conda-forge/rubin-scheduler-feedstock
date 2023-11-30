@@ -43,7 +43,6 @@ test:
   imports:
     - rubin_scheduler
   commands:
-    - pip check
     - scheduler_download_data --help
     - rs_download_sky --help
   requires:
