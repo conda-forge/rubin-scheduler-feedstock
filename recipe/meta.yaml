@@ -15,16 +15,16 @@ build:
     - rs_download_sky = rubin_scheduler.data.rs_download_sky:rs_download_sky
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - setuptools
     - setuptools-scm <8.0
     - pip
   run:
-    - python >=3.7
+    - python >=3.9
     - numpy
     - matplotlib-base
     - healpy
@@ -38,6 +38,7 @@ requirements:
     - requests
     - shapely
     - tqdm
+    - conda
 
 test:
   imports:
