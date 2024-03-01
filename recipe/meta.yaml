@@ -1,5 +1,5 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rubin-scheduler-{{ version }}.tar.gz
-  sha256: 045dde4462fdead7a38530ae2d0e9257057a7e78737c876ae1a5e01d0332ed70
+  sha256: 39a18cacc59562c4f690edaff0461a835e7e53c68da4f3c61ae185a9fe703540
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - rs_download_sky = rubin_scheduler.data.rs_download_sky:rs_download_sky
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
