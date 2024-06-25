@@ -30,7 +30,7 @@ requirements:
     - healpy
     - pandas
     - numexpr
-    - scipy < 1.14
+    - scipy <1.14
     - astroplan
     - astropy
     - pytables
