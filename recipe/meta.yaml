@@ -15,7 +15,7 @@ build:
     - rs_download_sky = rubin_scheduler.data.rs_download_sky:rs_download_sky
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -30,7 +30,7 @@ requirements:
     - healpy
     - pandas
     - numexpr
-    - scipy
+    - scipy < 1.14
     - astroplan
     - astropy
     - pytables
