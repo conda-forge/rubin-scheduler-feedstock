@@ -1,5 +1,5 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ build:
     - rs_download_sky = rubin_scheduler.data.rs_download_sky:rs_download_sky
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -30,7 +30,7 @@ requirements:
     - healpy
     - pandas
     - numexpr
-    - scipy <1.14
+    - scipy
     - astroplan
     - astropy
     - pytables
@@ -38,6 +38,7 @@ requirements:
     - requests
     - shapely
     - tqdm
+    - gitpython
     - conda
 
 test:
