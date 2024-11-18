@@ -1,13 +1,13 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9f7912ff32e829cc88fd843b29d05864703f6a93777d7dd07dd45a81c8044e9c
+  url: https://pypi.or/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2c638f2899dd1c1c99400b904ceac775360a437869ec7732360a2d50c0bb5464
 
 build:
   entry_points:
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm <8.0
     - pip
   run:
-    - python >=3.9
+    - python >= {{ python_min }}
     - numpy
     - matplotlib-base
     - healpy
