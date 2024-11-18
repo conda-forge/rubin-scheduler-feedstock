@@ -24,7 +24,7 @@ requirements:
     - setuptools-scm <8.0
     - pip
   run:
-    - python >= {{ python_min }}
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base
     - healpy
