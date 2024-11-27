@@ -1,5 +1,5 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "3.3.1" %}
+{% set version = "3.4.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 327a5095aecb7b7b8de8a8c446d038188f398797a708a36b18308c6d7f84f777
+  sha256: 7a4ec21449e161fe42d0c9e7051416d32f2035ba86cce04e1a8fccd1af37e266
 
 build:
   entry_points:
@@ -50,6 +50,7 @@ test:
     - rs_download_sky --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/lsst/rubin_scheduler
