@@ -1,5 +1,5 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "4.0.0" %}
+{% set version = "3.6.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d0302289126330faebe1596e635689f55c97b02f233841ad50cb0803bc98f95e
+  sha256: bc91a484d08eeadfa60b660ffea7f33709c6835b6837ca40db0146db7b3a77a1
 
 build:
   entry_points:
@@ -16,13 +16,13 @@ build:
     - rs_download_sky = rubin_scheduler.data.rs_download_sky:rs_download_sky
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - setuptools
-    - setuptools-scm <8.0
+    - setuptools-scm >=8.0
     - pip
   run:
     - python >={{ python_min }}
