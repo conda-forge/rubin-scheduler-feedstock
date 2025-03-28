@@ -1,5 +1,5 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "3.6.0" %}
+{% set version = "3.7.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: bc91a484d08eeadfa60b660ffea7f33709c6835b6837ca40db0146db7b3a77a1
+  sha256: 9fd5434288e817d97964987114746a652080501f578409aebdcdea6709bf5168
 
 build:
   entry_points:
@@ -39,8 +39,6 @@ requirements:
     - requests
     - shapely
     - tqdm
-    - gitpython
-    - conda
 
 test:
   imports:
