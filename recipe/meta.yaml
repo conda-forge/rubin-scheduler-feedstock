@@ -1,5 +1,5 @@
 {% set name = "rubin-scheduler" %}
-{% set version = "3.9.0" %}
+{% set version = "3.10.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: dac40c11a04e38b53e00ca2295d42f9c23f9466917367df66af8df01338d3126
+  sha256: 54a609f0e428a9d68f405a3da99320d01371372b3725e3b355ee24577552094e
 
 build:
   entry_points:
